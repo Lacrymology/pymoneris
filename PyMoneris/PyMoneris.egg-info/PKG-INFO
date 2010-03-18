@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: PyMoneris
+Version: 0.1dev
+Summary: A Python interface to Moneris APIs.
+Home-page: http://agentultra.com
+Author: J Kenneth King
+Author-email: james@agentultra.com
+License: LGPL
+Description: Currently supports their eselectplus product.
+        
+        Closely resembles the official Perl interface and may not seem intuitive as such to Python developers.
+        
+        Future work will be made to make it more Pythonic and support other Moneris products.
+        
+Keywords: ecommerce,moneris,eselectplus
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Topic :: Other/Nonlisted Topic
