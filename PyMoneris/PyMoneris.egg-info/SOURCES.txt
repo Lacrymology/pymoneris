@@ -6,6 +6,7 @@ PyMoneris.egg-info/dependency_links.txt
 PyMoneris.egg-info/entry_points.txt
 PyMoneris.egg-info/not-zip-safe
 PyMoneris.egg-info/top_level.txt
+docs/license.txt
 pymoneris/__init__.py
 pymoneris/eselectplus.py
 pymoneris/helpers.py

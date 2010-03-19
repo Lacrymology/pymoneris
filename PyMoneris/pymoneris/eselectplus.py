@@ -182,7 +182,25 @@ class Transaction(object):
         cavv_purchase=['order_id','cust_id', 'amount', 'pan',
                        'expdate', 'cavv'],
         cavv_preauth=['order_id','cust_id', 'amount', 'pan',
-                      'expdate', 'cavv'])
+                      'expdate', 'cavv'],
+        recur_update=['order_id', 'cust_id', 'pan', 'expdate', 'recur_amount',
+                      'add_num_recurs', 'total_num_recurs', 'hold',
+                      'terminate'],
+        res_add_cc=['cust_id', 'phone', 'email', 'note', 'pan', 'expdate',
+                    'crypt_type'],
+        res_update_cc=['data_key', 'cust_id', 'phone', 'email', 'note', 'pan',
+                       'expdate', 'crypt_type'],
+        res_delete=['data_key'],
+        res_lookup_full=['data_key'],
+        res_lookup_masked=['data_key'],
+        res_get_expiring=[],
+        res_purchase_cc=['data_key', 'order_id', 'cust_id', 'amount',
+                         'crypt_type'],
+        res_preauth_cc=['data_key', 'order_id', 'cust_id', 'amount',
+                        'crypt_type'],
+        res_ind_refund_cc=['data_key', 'order_id', 'cust_id', 'amount',
+                           'crypt_type'],
+        res_iscorporatecard=['data_key'])
 
     def __init__(self, **req_data):
         try:

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+version = '0.1r2'
 
 setup(name='PyMoneris',
       version=version,
@@ -21,7 +21,7 @@ Future work will be made to make it more Pythonic and support other Moneris prod
       keywords='ecommerce, moneris, eselectplus',
       author='J Kenneth King',
       author_email='james@agentultra.com',
-      url='http://agentultra.com',
+      url='http://code.google.com/p/pymoneris/',
       license='LGPL',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,

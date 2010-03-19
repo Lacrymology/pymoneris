@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: PyMoneris
-Version: 0.1dev
+Version: 0.1r2dev-r2
 Summary: A Python interface to Moneris APIs.
-Home-page: http://agentultra.com
+Home-page: http://code.google.com/p/pymoneris/
 Author: J Kenneth King
 Author-email: james@agentultra.com
 License: LGPL
