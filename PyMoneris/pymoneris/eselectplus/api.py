@@ -43,7 +43,7 @@ class MpgCustInfo(object):
 
     # Beware this messy class.  Look at the official Moneris Perl API.
 
-    _level3template = ['email', 'instructions', 'billing', 'shipping', 'item']
+    _level3template = ['email', 'instructions', 'billing', 'shipping', 'items']
     _level3template_details = dict(
         email='0',
         instructions='0',
@@ -54,14 +54,14 @@ class MpgCustInfo(object):
                   'city', 'province', 'postal_code', 'country',
                   'phone_number', 'fax','tax1', 'tax2', 'tax3',
                   'shipping_cost'],
-        item=['name', 'quantity', 'product_code', 'extended_amount'])
+        items=['name', 'quantity', 'product_code', 'extended_amount'])
 
-    def __init__(self, email, instructions, shipping, billing, item):
+    def __init__(self, email, instructions, shipping, billing, items):
         self.email = email
         self.instructions = instructions
         self.shipping = shipping
         self.billing = billing
-        self.item = item
+        self.items = items
 
     def _to_xml(self):
         xml_string = begin_tag = end_tag = pcdata = ''
@@ -76,6 +76,16 @@ class MpgCustInfo(object):
                     raise AssertionError, "Missing cust_info field: %s"\
                         % (element,)
                 xml_string += begin_tag + pcdata + end_tag
+            elif element == 'items':
+                begin_tag = '<item>'
+                end_tag = '</item>'
+                for item in getattr(self, element):
+                    inner_xml = ''
+                    for tag in self._level3template_details[element]:
+                        inner_xml += '<%s>%s</%s>' % (tag,
+                                                      item[tag],
+                                                      tag)
+                    xml_string += begin_tag + inner_xml + end_tag
             else:
                 try:
                     t_data = getattr(self, element)
@@ -86,8 +96,9 @@ class MpgCustInfo(object):
                 begin_tag = '<%s>' % element
                 end_tag = '</%s>' % element
                 inner_xml = ''
+                inner_tags = self._level3template_details[element]
 
-                for tag in self._level3template_details:
+                for tag in inner_tags:
                     try:
                         inner_xml += '<%s>%s</%s>' % (tag,
                                                       t_data[tag],
