@@ -261,7 +261,7 @@ class Transaction(object):
     def add_recur(self, recur_unit, start_now, start_date,
                   num_recurs, period, recur_amount):
         mpg_recur = MpgRecur(recur_unit=recur_unit,
-                             start_now=start_name,
+                             start_now=start_now,
                              start_date=start_date,
                              num_recurs=num_recurs,
                              period=period,
