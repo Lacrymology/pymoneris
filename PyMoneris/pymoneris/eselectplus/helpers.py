@@ -70,7 +70,7 @@ class XmlDictConfig(dict):
                 self.update({element.tag: element.text})
 
 
-def xml_to_dict(xml):
+def xml_to_dict(xml_string):
     """ Return a dictionary from an XML string."""
     root = ElementTree.XML(xml_string)
     return XmlDictConfig(root)
