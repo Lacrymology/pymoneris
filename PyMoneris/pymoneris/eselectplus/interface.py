@@ -37,7 +37,7 @@ class ESelectPlus(object):
         >>> res = processor.purchase('1', '42', '0.99', '4242424242424242',
         ...                          '1010', '7')
         """
-        txn = Transaction(dict(
+        txn = api.Transaction(dict(
                 type='purchase',
                 cust_id=cust_id,
                 amount=amount,
