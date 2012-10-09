@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: PyMoneris
-Version: 0.1r2dev-r2
+Version: 0.1r2dev
 Summary: A Python interface to Moneris APIs.
 Home-page: http://code.google.com/p/pymoneris/
 Author: J Kenneth King

@@ -8,5 +8,7 @@ PyMoneris.egg-info/not-zip-safe
 PyMoneris.egg-info/top_level.txt
 docs/license.txt
 pymoneris/__init__.py
-pymoneris/eselectplus.py
-pymoneris/helpers.py
+pymoneris/eselectplus/__init__.py
+pymoneris/eselectplus/api.py
+pymoneris/eselectplus/helpers.py
+pymoneris/eselectplus/interface.py
